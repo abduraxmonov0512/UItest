@@ -24,6 +24,8 @@ public class EShopContractPage extends Base {
     private SelenideElement deliverTime = $(".row", 13);
     private SelenideElement price = $(".row", 14);
 
+    private SelenideElement btnSubscribe = $(".ui-btn-primary");
+
     private List<SelenideElement> list;
 
     public EShopContractPage() {
@@ -45,5 +47,12 @@ public class EShopContractPage extends Base {
         count.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.requestCount));
         deliverTime.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.deliveryTime));
 //        price.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.price));
+    }
+
+    public void clickButtonSubscribe(){
+        click(btnSubscribe);
+        $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
+        click($(By.xpath("//div[@class='iac-dialog-footer']//button[@class=\"ui-btn ui-btn-primary\"]")));
+        ignoreEImzo();
     }
 }

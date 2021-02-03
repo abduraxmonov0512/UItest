@@ -76,11 +76,6 @@ public class RequestPage extends Base {
     public void openContract(){
         SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent();
         request.find(By.className("ui-btn-primary")).click();
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
 }
