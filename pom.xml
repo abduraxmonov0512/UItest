@@ -44,6 +44,10 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                         <property>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/jenkins_home/workspace/UItest/allure-report</value>
+                        </property>
+                        <property>
                             <name>allure.link.issue.pattern</name>
                             <value>https://example.org/issue/{}</value>
                         </property>
