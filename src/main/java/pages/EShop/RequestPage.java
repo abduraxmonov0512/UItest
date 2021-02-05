@@ -69,13 +69,18 @@ public class RequestPage extends Base {
         $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).scrollTo().waitUntil(Condition.visible, 10000);
         SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent();
         System.out.println(request);
-        request.shouldHave(Condition.text("Договор"));
+        try {
+            request.shouldHave(Condition.text("Договор"));
+        }catch (Exception e){
+            refresh();
+            request.shouldHave(Condition.text("Договор"));
+        }
 
     }
 
     public void openContract(){
         SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent();
-        request.find(By.className("ui-btn-primary")).click();
+        request.find(By.tagName("button")).click();
     }
 
 }

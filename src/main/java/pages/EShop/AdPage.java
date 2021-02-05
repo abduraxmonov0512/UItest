@@ -22,7 +22,7 @@ public class AdPage extends Base {
     }
 
     public void adStatusIs (String status){
-        adStatus.waitUntil(Condition.visible, 5000);
+        adStatus.waitUntil(Condition.visible, 10000);
         adStatus.shouldHave(Condition.text(status));
         String str = $(".title", 1).getText();
         String id = str.replaceAll("[^0-9]", "");

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class EShopContractPage extends Base {
     private SelenideElement btnChat = $(".page-contract__chat-btn");
-    private SelenideElement status = $(".row", 0);
+    private SelenideElement contractStatus = $(".row", 0);
     private SelenideElement nameProduct = $(".row", 3);
     private SelenideElement brand = $(".row", 4);
     private SelenideElement manufacture = $(".row", 5);
@@ -29,7 +29,7 @@ public class EShopContractPage extends Base {
     private List<SelenideElement> list;
 
     public EShopContractPage() {
-        list = Arrays.asList(btnChat,status,nameProduct,brand,manufacture,countryOrigin,
+        list = Arrays.asList(btnChat,contractStatus,nameProduct,brand,manufacture,countryOrigin,
                 characters,license,count,deliverTime,price);
     }
 
@@ -54,5 +54,11 @@ public class EShopContractPage extends Base {
         $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
         click($(By.xpath("//div[@class='iac-dialog-footer']//button[@class=\"ui-btn ui-btn-primary\"]")));
         ignoreEImzo();
+    }
+
+    public void contractStatusIs(String status){
+        contractStatus.waitUntil(Condition.visible, 5000);
+        contractStatus.find(By.tagName("span")).shouldHave(Condition.text(status));
+        //contractStatus.shouldHave(Condition.text(status));
     }
 }

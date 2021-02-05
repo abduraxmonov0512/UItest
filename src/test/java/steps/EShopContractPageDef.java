@@ -17,4 +17,14 @@ public class EShopContractPageDef {
     public void проверитЧтоВсеДанныеДоговораПравильны() {
         eShopContractPage.checkContractData();
     }
+
+    @Тогда("подписать договор")
+    public void подписатьДоговор() {
+        eShopContractPage.clickButtonSubscribe();
+    }
+
+    @Тогда("статус Договора {string}")
+    public void статусДоговора(String status) {
+        eShopContractPage.contractStatusIs(status);
+    }
 }

@@ -32,8 +32,10 @@ public class ClearingPage extends Base{
 
     public void checkBillings(String deposit, String commission){
         List <SelenideElement> listBillings = $$(By.xpath("//tbody//tr"));
-        listBillings.get(0).shouldHave(Condition.text(commission));
-        listBillings.get(1).shouldHave(Condition.text(deposit));
+       // System.out.println(listBillings.get(0).find(By.xpath("//td")).getText() + " EKSPERIMENT");
+        listBillings.get(0).shouldHave(Condition.or("text", Condition.text(deposit), Condition.text(commission)));
+        listBillings.get(1).shouldHave(Condition.or("text", Condition.text(deposit), Condition.text(commission)));
+       // listBillings.get(1).shouldHave(Condition.text(commission));
     }
 
 }
