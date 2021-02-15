@@ -66,6 +66,12 @@ public class RequestPage extends Base {
     }
 
     public void checkContractCreated(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        refresh();
         $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).scrollTo().waitUntil(Condition.visible, 10000);
         SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent();
         System.out.println(request);
@@ -79,8 +85,9 @@ public class RequestPage extends Base {
     }
 
     public void openContract(){
-        SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent();
-        request.find(By.tagName("button")).click();
+        SelenideElement request = $(By.xpath("//tr//*[text()="+AdInfo.requestId+"]")).parent().scrollTo();
+        //request.find(By.tagName("button")).find(By.tagName("span")).click();
+        click(request.find(By.tagName("button")).find(By.tagName("span")));
     }
 
 }
