@@ -58,7 +58,7 @@ public class EShopContractPage extends Base {
 
     public void contractStatusIs(String status){
         contractStatus.waitUntil(Condition.visible, 5000);
-        contractStatus.find(By.tagName("span")).shouldHave(Condition.text(status));
+        contractStatus.find(By.tagName("span")).waitUntil((Condition.text(status)),5000);
         //contractStatus.shouldHave(Condition.text(status));
     }
 }
