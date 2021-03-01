@@ -27,6 +27,7 @@ public class RunCucumberTest {
         options.addArguments("window-size=1200,1100");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        capabilities.setCapability("takesScreenShot", false);
         Configuration.browserCapabilities = capabilities;
        // Configuration.startMaximized = true;
     }

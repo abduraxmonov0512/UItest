@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b6dadb-0e11-4e36-baba-6d742b6c2ac0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/common/OfferPriceModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/OfferPriceModalDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/AdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/AdPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AdPageDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AdPageDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,22 +115,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612179376975" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1613391639380">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1614605117765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613391639380" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1613391639380">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614605117765" />
+    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1614605117764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613391639380" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1613391639380">
+    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614605117764" />
+    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1614605117764">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613391639380" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1613391639380">
+    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614605117764" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1614605117765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613391639380" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614605117765" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1610360644913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -150,18 +155,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1612178486496" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1614146791511">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1614573905835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614146791511" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614573905835" />
     <state x="364" y="177" key="new project wizard" timestamp="1610263967071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="364" y="177" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1610263967071" />
-    <state x="1101" y="385" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1611810313028">
+    <state x="1101" y="385" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1614580068672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1101" y="385" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611810313028" />
+    <state x="1101" y="385" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614580068672" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610009037292">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

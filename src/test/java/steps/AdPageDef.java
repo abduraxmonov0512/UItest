@@ -29,4 +29,9 @@ public class AdPageDef {
     public void нажатьНаКнопкуЗапроситьЦену() {
         adPage.clickButtonRequestPrice();
     }
+
+    @И("нажать на кнопку Предложить цену")
+    public void нажатьНаКнопкуПредложитьЦену() {
+        adPage.clickButtonOfferPrice();
+    }
 }

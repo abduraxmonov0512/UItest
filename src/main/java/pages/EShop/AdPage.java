@@ -15,6 +15,7 @@ public class AdPage extends Base {
     private SelenideElement adTitle = $(".iac-section-header .title");
     private SelenideElement adStatus = $(".status .value");
     private SelenideElement btnPostAd = $(".ui-btn-primary");
+    private SelenideElement btnOffertPrice = $(By.xpath("//button//span[text()='Предложить цену']"));
 
     public void inTitleHasId (int id){
         String titleId = Integer.toString(id);
@@ -48,5 +49,9 @@ public class AdPage extends Base {
 
     public void clickButtonRequestPrice(){
         click(btnRequestPrice);
+    }
+
+    public void clickButtonOfferPrice(){
+        click(btnOffertPrice);
     }
 }

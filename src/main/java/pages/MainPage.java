@@ -48,6 +48,7 @@ public class MainPage extends Base {
     }
 
     public void clickWorkspaceLink(){
+        workspaceLink.waitUntil(Condition.visible,5000);
         click(workspaceLink);
     }
 }
