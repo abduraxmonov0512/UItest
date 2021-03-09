@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.ru.И;
+import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import pages.EShop.EShopContractPage;
 
@@ -26,5 +27,16 @@ public class EShopContractPageDef {
     @Тогда("статус Договора {string}")
     public void статусДоговора(String status) {
         eShopContractPage.contractStatusIs(status);
+    }
+
+    @Когда("нажать на таб Исполнение договорных обязательств в договоре")
+    public void нажатьНаТабИсполнениеДоговорныхОбязательствВДоговоре() {
+        eShopContractPage.clickBtnExecutionContract();
+    }
+
+
+    @Когда("нажать на Денежные средста перечислены")
+    public void нажатьНаДенежныеСредстаПеречислены() {
+        eShopContractPage.clickButtonMoneyTransfer();
     }
 }

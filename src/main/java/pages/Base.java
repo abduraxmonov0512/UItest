@@ -47,6 +47,7 @@ public abstract class Base {
     }
 
     public void click(SelenideElement element) {
+       // element.waitUntil(Condition.visible, 25000);
         element.scrollTo().shouldBe(Condition.visible).click();
     }
 

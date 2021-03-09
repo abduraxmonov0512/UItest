@@ -23,21 +23,23 @@ public class EShopContractPage extends Base {
     private SelenideElement count = $(".row", 12);
     private SelenideElement deliverTime = $(".row", 13);
     private SelenideElement price = $(".row", 14);
+    private SelenideElement btnExecutionContract = $("[href=\"/workspace/contract/917.1.1/execution\"]");
+    private SelenideElement btnMoneyTransfer = $(By.xpath("//button[text()='Денежные средства перечислены']"));
 
     private SelenideElement btnSubscribe = $(".ui-btn-primary");
 
     private List<SelenideElement> list;
 
     public EShopContractPage() {
-        list = Arrays.asList(btnChat,contractStatus,nameProduct,brand,manufacture,countryOrigin,
-                characters,license,count,deliverTime,price);
+        list = Arrays.asList(btnChat, contractStatus, nameProduct, brand, manufacture, countryOrigin,
+                characters, license, count, deliverTime, price);
     }
 
-    public void eShopContractPageIsDisplayed(){
+    public void eShopContractPageIsDisplayed() {
         allElementsAreVisibleWithHeader(list);
     }
 
-    public void checkContractData(){
+    public void checkContractData() {
         nameProduct.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.nameProduct));
         brand.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.brand));
         manufacture.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.manufacturer));
@@ -49,16 +51,26 @@ public class EShopContractPage extends Base {
 //        price.find(By.className("col-sm-5")).shouldHave(Condition.text(AdInfo.price));
     }
 
-    public void clickButtonSubscribe(){
+    public void clickButtonSubscribe() {
         click(btnSubscribe);
         $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
         click($(By.xpath("//div[@class='iac-dialog-footer']//button[@class=\"ui-btn ui-btn-primary\"]")));
         ignoreEImzo();
     }
 
-    public void contractStatusIs(String status){
+    public void contractStatusIs(String status) {
         contractStatus.waitUntil(Condition.visible, 5000);
-        contractStatus.find(By.tagName("span")).waitUntil((Condition.text(status)),5000);
+        contractStatus.find(By.tagName("span")).waitUntil((Condition.text(status)), 5000);
         //contractStatus.shouldHave(Condition.text(status));
+    }
+
+    public void clickBtnExecutionContract() {
+        click($(By.xpath("//a[text()='Исполнение договорных обязательств']")));
+
+    }
+
+    public void clickButtonMoneyTransfer() {
+        click(btnMoneyTransfer);
+        click($(By.xpath("//div[@class=\"iac-dialog_modal_box-content\"]//button[@class=\"ui-btn ui-btn-primary\"]")));
     }
 }

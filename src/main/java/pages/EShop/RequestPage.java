@@ -24,7 +24,7 @@ public class RequestPage extends Base {
     private SelenideElement dropDownStatus = $(By.xpath("//div[@class='container']//*[text()='Статус']"));
     private SelenideElement tabParticipate = $(By.xpath("//div[@class=\"tab-nav\"]//*[text()=\"Участвуем\"]"));
     private SelenideElement tabSubscription = $(By.xpath("//div[@class=\"tab-nav\"]//*[text()=\"Подписка\"]"));
-    private SelenideElement buttonCloseRequest = $(By.xpath("//button//span[text()='Закрыть процедуру']"));
+    private SelenideElement buttonCloseRequest = $(By.xpath("//button//span[text()='Закрыть']"));
 
     private SelenideElement columnID = $(By.xpath("//table//th[text()='id']"));
     private SelenideElement columnDateRequest = $(By.xpath("//table//th[text()='Дата запроса']"));
