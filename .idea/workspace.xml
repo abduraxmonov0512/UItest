@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b6dadb-0e11-4e36-baba-6d742b6c2ac0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/ExecutionContractPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/common/ErrorModal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/ErrorModalDef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/ExecutionContractPageDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopPublicPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopPublicPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/RequestPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/RequestPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/EShopContractPageDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/EShopContractPageDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
