@@ -23,7 +23,7 @@ public class ExecutionContractPage extends Base {
     }
 
     public void choosePenaltyFor(String text){
-        click(dropdownPenaltiesFor);
+        click(dropdownPenaltiesFor.parent());
         click($(By.xpath("//div[@class=\"display\"][text()='" + text + "']")));
     }
 

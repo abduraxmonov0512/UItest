@@ -1,6 +1,7 @@
 package helpers;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.cucumber.java.Before;
 import org.openqa.selenium.By;
@@ -22,6 +23,7 @@ public class Hooks {
     @Before
     public void openUrl(){
         open("https://demo.xt-xarid.uz/");
+        Selenide.localStorage().setItem("access_debug", "true");
         if(language.getText().equals("UZ")){
 
             languageDropDown.click();

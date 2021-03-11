@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.refresh;
 
 public class EShopContractPage extends Base {
     private SelenideElement btnChat = $(".page-contract__chat-btn");
@@ -25,6 +26,7 @@ public class EShopContractPage extends Base {
     private SelenideElement price = $(".row", 14);
     private SelenideElement btnExecutionContract = $("[href=\"/workspace/contract/917.1.1/execution\"]");
     private SelenideElement btnMoneyTransfer = $(By.xpath("//button[text()='Денежные средства перечислены']"));
+    private SelenideElement btnRepeatContract = $(By.xpath("//button[text()='Сбрасывать финальные состояния']"));
 
     private SelenideElement btnSubscribe = $(".ui-btn-primary");
 
@@ -72,5 +74,17 @@ public class EShopContractPage extends Base {
     public void clickButtonMoneyTransfer() {
         click(btnMoneyTransfer);
         click($(By.xpath("//div[@class=\"iac-dialog_modal_box-content\"]//button[@class=\"ui-btn ui-btn-primary\"]")));
+    }
+
+    public void clickButtonRepeatContract() {
+        btnRepeatContract.waitUntil(Condition.visible, 4000);
+        btnRepeatContract.scrollTo();
+        click(btnRepeatContract);
+        AdInfo.countResets++;
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

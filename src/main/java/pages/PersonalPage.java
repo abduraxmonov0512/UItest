@@ -42,11 +42,11 @@ public class PersonalPage extends Base {
     public void personalPageIsDisplayed(){
         if(TestContext.userRole == BUYER_COMPANY_ADMIN){
             listElements = Arrays.asList(sectionAffiliation, sectionAgreement, sectionClaims, sectionContract,
-                    sectionOrganization, sectionSchedule, sectionTypePurchase,  btnLogout, freeMoney,
+                    sectionOrganization, sectionSchedule, sectionTypePurchase,  btnLogout,
                     username);
         } else if(TestContext.userRole == SELLER){
             listElements = Arrays.asList(sectionContract, sectionEShop,
-                    sectionOrganization,  sectionTypePurchase,  btnLogout, freeMoney,
+                    sectionOrganization,  sectionTypePurchase,  btnLogout,
                     username);
         }
         allElementsAreVisibleWithHeader(listElements);
@@ -73,5 +73,9 @@ public class PersonalPage extends Base {
 
     public void clickSubSectionClearing(){
         click(subSectionClearing);
+    }
+
+    public void clickSectionContracts(){
+        click(sectionContract);
     }
 }

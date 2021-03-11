@@ -40,4 +40,9 @@ public class PersonalPageDef {
     public void нажатьНаПодРаздельКлиринг() {
         personalPage.clickSubSectionClearing();
     }
+
+    @Когда("нажать на раздель Договоры")
+    public void нажатьНаРаздельДоговоры() {
+        personalPage.clickSectionContracts();
+    }
 }

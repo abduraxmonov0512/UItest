@@ -9,7 +9,7 @@ public class EShopContractPageDef {
 
     private EShopContractPage eShopContractPage = new EShopContractPage();
 
-    @И("страница Договора отоброжено")
+    @И("страница Договора ЭМ отоброжено")
     public void страницаДоговораОтоброжено() {
         eShopContractPage.eShopContractPageIsDisplayed();
     }
@@ -38,5 +38,10 @@ public class EShopContractPageDef {
     @Когда("нажать на Денежные средста перечислены")
     public void нажатьНаДенежныеСредстаПеречислены() {
         eShopContractPage.clickButtonMoneyTransfer();
+    }
+
+    @Тогда("нажать на кнопку Сбрасывать финальные состояния")
+    public void нажатьНаКнопкуСбрасыватьФинальныеСостояния() {
+        eShopContractPage.clickButtonRepeatContract();
     }
 }

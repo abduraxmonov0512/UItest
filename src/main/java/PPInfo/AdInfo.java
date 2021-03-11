@@ -27,4 +27,5 @@ public class AdInfo {
     public static String deliveryRegion;
     public static int requestId;
     public static String requestCount;
+    public static int countResets = 1;
 }

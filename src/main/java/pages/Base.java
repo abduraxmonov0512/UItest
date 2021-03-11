@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ex.ElementNotFound;
 import org.openqa.selenium.By;
@@ -65,6 +66,10 @@ public abstract class Base {
         $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
         $(By.xpath("//button[@class=\"ui-btn ui-btn-primary\"][text()='Да']")).shouldBe(Condition.visible).click();
 
+    }
+
+    public void clickButtonBack(){
+        Selenide.back();
     }
 
     public boolean elementExpected(int id) {
