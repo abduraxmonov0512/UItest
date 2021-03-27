@@ -2,6 +2,7 @@ package pages.EShop;
 
 import PPInfo.AdInfo;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import pages.Base;
@@ -9,8 +10,7 @@ import pages.Base;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.refresh;
+import static com.codeborne.selenide.Selenide.*;
 
 public class EShopContractPage extends Base {
     private SelenideElement btnChat = $(".page-contract__chat-btn");
@@ -28,7 +28,8 @@ public class EShopContractPage extends Base {
     private SelenideElement btnMoneyTransfer = $(By.xpath("//button[text()='Денежные средства перечислены']"));
     private SelenideElement btnRepeatContract = $(By.xpath("//button[text()='Сбрасывать финальные состояния']"));
 
-    private SelenideElement btnSubscribe = $(".ui-btn-primary");
+    private SelenideElement btnSubscribeContract = $(".ui-btn-primary");
+    private SelenideElement btnCancelContract = $(".ui-btn-danger");
 
     private List<SelenideElement> list;
 
@@ -54,10 +55,16 @@ public class EShopContractPage extends Base {
     }
 
     public void clickButtonSubscribe() {
-        click(btnSubscribe);
+        click(btnSubscribeContract);
         $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
         click($(By.xpath("//div[@class='iac-dialog-footer']//button[@class=\"ui-btn ui-btn-primary\"]")));
         ignoreEImzo();
+    }
+
+    public void clickButtonCancelContract(){
+        click(btnCancelContract);
+        $(By.tagName("textarea")).sendKeys("Причина эти ***** автотесты");
+        click($(By.xpath("//button[text()='Отказаться от подписания']")));
     }
 
     public void contractStatusIs(String status) {

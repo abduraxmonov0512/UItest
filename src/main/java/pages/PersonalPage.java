@@ -72,6 +72,9 @@ public class PersonalPage extends Base {
     }
 
     public void clickSubSectionClearing(){
+        if(!subSectionClearing.isDisplayed()){
+            click(sectionOrganization);
+        }
         click(subSectionClearing);
     }
 

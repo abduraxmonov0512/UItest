@@ -1,13 +1,14 @@
 package pages;
 
 import PPInfo.AdInfo;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ContractsPage extends Base {
 
@@ -32,6 +33,7 @@ public class ContractsPage extends Base {
     }
 
     public void goToLastCreatedContract() {
+
         click($("[href=\"/workspace/contract/" + AdInfo.requestId + "." + AdInfo.countResets + ".1\"]"));
     }
 }

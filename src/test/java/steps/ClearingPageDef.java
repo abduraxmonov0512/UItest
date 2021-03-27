@@ -19,4 +19,19 @@ public class ClearingPageDef {
     public void вБиллингеСуммаЗаблокирована(String deposit, String commission) {
         clearingPage.checkBillings(deposit, commission);
     }
+
+    @И("тестовқй")
+    public void тестовқй() {
+        clearingPage.debitSumWith("asd", "ad");
+    }
+
+    @И("{string} Кредит на {string}")
+    public void кредитНа(String text, String sum) {
+        clearingPage.creditSumWith(text, sum);
+    }
+
+    @И("{string} Дебит  на сумму {string}")
+    public void дебитНаСумму(String text, String sum) {
+        clearingPage.debitSumWith(text, sum);
+    }
 }

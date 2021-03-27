@@ -28,7 +28,7 @@ public class EShopPublicPage extends Base {
 
     public void chooseAdById(int id) {
 
-        while (!elementExpected(id)){
+        while (!adExpected(id)){
             $(By.xpath("//button[@class=\"ui-btn content ui-btn-info\"]")).waitUntil(Condition.visible, 10000);
             click($(By.xpath("//button[@class=\"ui-btn content ui-btn-info\"]")));
             System.out.println("sikl in test");

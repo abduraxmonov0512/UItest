@@ -44,4 +44,9 @@ public class EShopContractPageDef {
     public void нажатьНаКнопкуСбрасыватьФинальныеСостояния() {
         eShopContractPage.clickButtonRepeatContract();
     }
+
+    @Когда("нажать отказаться в договоре")
+    public void нажатьОтказатьсяВДоговора() {
+        eShopContractPage.clickButtonCancelContract();
+    }
 }

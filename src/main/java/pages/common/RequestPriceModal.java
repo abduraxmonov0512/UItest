@@ -23,6 +23,7 @@ public class RequestPriceModal extends Base {
 
     public void clickBtnSend(){
         click(btnSend);
+
         ignoreEImzo();
     }
 

@@ -24,12 +24,13 @@ public class RunCucumberTest {
     public static void configuration(){
       //  Configuration.headless = true;
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+       // options.addArguments("headless");
         options.addArguments("window-size=1200,1100");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         capabilities.setCapability("takesScreenShot", false);
         Configuration.browserCapabilities = capabilities;
+        Configuration.timeout = 15000;
        // Configuration.startMaximized = true;
     }
 }

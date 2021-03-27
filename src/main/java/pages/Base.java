@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.refresh;
 
 public abstract class Base {
 
@@ -48,8 +49,20 @@ public abstract class Base {
     }
 
     public void click(SelenideElement element) {
-       // element.waitUntil(Condition.visible, 25000);
-        element.scrollTo().shouldBe(Condition.visible).click();
+        int countRefresh = 0;
+        boolean flag = true;
+        do{
+            try {
+                element.scrollTo().waitUntil(Condition.visible, 5000);
+                flag = element.is(Condition.appear);
+                element.scrollTo().shouldBe(Condition.visible).click();
+            }catch (ElementNotFound e){
+                refresh();
+                countRefresh++;
+            }
+        }while (!flag && countRefresh < 3);
+//        element.scrollTo().waitUntil(Condition.appear, 5000);
+//        element.scrollTo().shouldBe(Condition.appear).click();
     }
 
     public void editText(SelenideElement element, String txt) {
@@ -72,7 +85,14 @@ public abstract class Base {
         Selenide.back();
     }
 
-    public boolean elementExpected(int id) {
+    public boolean elementVisible(SelenideElement element){
+        if(element.is(Condition.exist)){
+            return true;
+        }
+        return element.isDisplayed();
+    }
+
+    public boolean adExpected(int id) {
         try {
 
             $("[href='/ad/" + id + "/core']").shouldBe(Condition.visible);
