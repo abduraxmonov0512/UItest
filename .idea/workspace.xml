@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b6dadb-0e11-4e36-baba-6d742b6c2ac0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/ClearingTableHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/EshopContractCases.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/test.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ClearingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ClearingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContractsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContractsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopPublicPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopPublicPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PersonalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PersonalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/common/RequestPriceModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/common/RequestPriceModal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ClearingPageDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ClearingPageDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/EShopContractPageDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/EShopContractPageDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShopContractTest2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShopContractTest2.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EshopContractTest1.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
