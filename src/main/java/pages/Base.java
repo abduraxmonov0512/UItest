@@ -49,20 +49,22 @@ public abstract class Base {
     }
 
     public void click(SelenideElement element) {
-        int countRefresh = 0;
-        boolean flag = true;
-        do{
-            try {
-                element.scrollTo().waitUntil(Condition.visible, 5000);
-                flag = element.is(Condition.appear);
-                element.scrollTo().shouldBe(Condition.visible).click();
-            }catch (ElementNotFound e){
-                refresh();
-                countRefresh++;
-            }
-        }while (!flag && countRefresh < 3);
-//        element.scrollTo().waitUntil(Condition.appear, 5000);
-//        element.scrollTo().shouldBe(Condition.appear).click();
+//        int countRefresh = 0;
+//        boolean flag = true;
+//        do{
+//            try {
+//                element.scrollTo().waitUntil(Condition.appear, 5000);
+//                flag = element.is(Condition.appear);
+//                element.scrollTo().shouldBe(Condition.visible).click();
+//            }catch (ElementNotFound e){
+//                refresh();
+//                countRefresh++;
+//            }
+//            System.out.println("refresh when NotFound: " + countRefresh);
+//        }while (!flag && countRefresh < 3);
+        element.scrollTo().waitUntil(Condition.appear, 5000);
+//        flag = element.is(Condition.appear);
+        element.scrollTo().shouldBe(Condition.visible).click();
     }
 
     public void editText(SelenideElement element, String txt) {

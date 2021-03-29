@@ -89,7 +89,7 @@ public class EShopContractPage extends Base {
         click(btnRepeatContract);
         AdInfo.countResets++;
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
