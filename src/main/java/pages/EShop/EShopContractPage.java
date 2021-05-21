@@ -22,13 +22,13 @@ public class EShopContractPage extends Base {
     private SelenideElement characters = $(".row", 10);
     private SelenideElement license = $(".row", 11);
     private SelenideElement count = $(".row", 12);
-    private SelenideElement deliverTime = $(".row", 13);
+    private SelenideElement deliverTime = $(".row", 9);
     private SelenideElement price = $(".row", 14);
     private SelenideElement btnExecutionContract = $("[href=\"/workspace/contract/917.1.1/execution\"]");
     private SelenideElement btnMoneyTransfer = $(By.xpath("//button[text()='Денежные средства перечислены']"));
     private SelenideElement btnRepeatContract = $(By.xpath("//button[text()='Сбрасывать финальные состояния']"));
 
-    private SelenideElement btnSubscribeContract = $(".ui-btn-primary");
+    private SelenideElement btnSubscribeContract = $(By.xpath("//button[@class=\"ui-btn ui-btn-primary\"]"));
     private SelenideElement btnCancelContract = $(".ui-btn-danger");
 
     private List<SelenideElement> list;
@@ -55,14 +55,16 @@ public class EShopContractPage extends Base {
     }
 
     public void clickButtonSubscribe() {
-        click(btnSubscribeContract);
+       // click(btnSubscribeContract);
+        Selenide.executeJavaScript("arguments[0].click();", btnSubscribeContract);
         $(".iac-dialog_modal_box-content").shouldBe(Condition.visible);
         click($(By.xpath("//div[@class='iac-dialog-footer']//button[@class=\"ui-btn ui-btn-primary\"]")));
         ignoreEImzo();
     }
 
     public void clickButtonCancelContract(){
-        click(btnCancelContract);
+      //  click(btnCancelContract);
+        Selenide.executeJavaScript("arguments[0].click();", btnCancelContract);
         $(By.tagName("textarea")).sendKeys("Причина эти ***** автотесты");
         click($(By.xpath("//button[text()='Отказаться от подписания']")));
     }
@@ -74,19 +76,21 @@ public class EShopContractPage extends Base {
     }
 
     public void clickBtnExecutionContract() {
-        click($(By.xpath("//a[text()='Исполнение договорных обязательств']")));
-
+        //click($(By.xpath("//a[text()='Исполнение договорных обязательств']")));
+        Selenide.executeJavaScript("arguments[0].click();", $(By.xpath("//a[text()='Исполнение договорных обязательств']")));
     }
 
     public void clickButtonMoneyTransfer() {
-        click(btnMoneyTransfer);
+        //click(btnMoneyTransfer);
+        Selenide.executeJavaScript("arguments[0].click();", btnMoneyTransfer);
         click($(By.xpath("//div[@class=\"iac-dialog_modal_box-content\"]//button[@class=\"ui-btn ui-btn-primary\"]")));
     }
 
     public void clickButtonRepeatContract() {
         btnRepeatContract.waitUntil(Condition.visible, 4000);
         btnRepeatContract.scrollTo();
-        click(btnRepeatContract);
+       // click(btnRepeatContract);
+        Selenide.executeJavaScript("arguments[0].click();", btnRepeatContract);
         AdInfo.countResets++;
         try {
             Thread.sleep(4000);

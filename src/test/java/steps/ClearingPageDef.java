@@ -20,10 +20,6 @@ public class ClearingPageDef {
         clearingPage.checkBillings(deposit, commission);
     }
 
-    @И("тестовқй")
-    public void тестовқй() {
-        clearingPage.debitSumWith("asd", "ad");
-    }
 
     @И("{string} Кредит на {string}")
     public void кредитНа(String text, String sum) {

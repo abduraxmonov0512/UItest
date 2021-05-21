@@ -21,7 +21,7 @@ public class ClearingPage extends Base {
     private SelenideElement tabOutMoney = $(By.xpath("//div[@class='item ']"));
     private SelenideElement inputDateFrom = $(By.xpath("//div[@title=\"От\"]//div[@class=\"ui-input-date\"]"));
     private SelenideElement inputDateTo = $(By.xpath("//div[@title=\"До\"]//div[@class=\"ui-input-date\"]"));
-    private SelenideElement operationType = $(By.xpath("//div[@class=\"ui-control ui-entity icon\"]"));
+    private SelenideElement operationType = $(By.xpath("//div[@class=\"ui-control ui-entity\"]"));
     private SelenideElement table = $(By.xpath("//div[@class=\"table-wrapper\"]"));
 
     private ClearingTableHelper clearingTableHelper;
@@ -67,6 +67,11 @@ public class ClearingPage extends Base {
                 countRefresh++;
             }
         } while (raw == null && countRefresh < 5);
+        // Если в цикле на верху не нашлос элеменет с подходящей текстом то сами валим тест
+        if(raw == null){
+            throw new NullPointerException();
+        }
+        raw.shouldHave(Condition.matchText(sum));
     }
 
 
@@ -91,6 +96,10 @@ public class ClearingPage extends Base {
                 countRefresh++;
             }
         } while (raw == null && countRefresh < 5);
+        if(raw == null){
+             throw new NullPointerException();
+        }
+        raw.shouldHave(Condition.matchText(sum));
 
     }
 

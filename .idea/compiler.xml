@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Autotest11" />
         <module name="xaridUITest" />
+        <module name="Autotest" />
       </profile>
     </annotationProcessing>
   </component>

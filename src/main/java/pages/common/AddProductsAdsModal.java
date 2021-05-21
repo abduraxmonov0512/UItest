@@ -1,8 +1,10 @@
 package pages.common;
 
 import PPInfo.AdInfo;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import pages.Base;
 
 import java.util.Arrays;
@@ -13,10 +15,10 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class AddProductsAdsModal extends Base {
 
-    private SelenideElement dialogHeader = $(".iac-dialog-header");
-    private SelenideElement categoryDropDown = $(".control", 1);
+    private SelenideElement modal = $(".iac-dialog_modal_box-content");
+    private SelenideElement categoryDropDown = modal.find(By.className("toolbar"));
     private SelenideElement templateDropDown = $(".control", 3);
-    private SelenideElement productDropDown = $(".control", 2);
+    private SelenideElement productDropDown = modal.find(By.className("toolbar"), 1);
     private SelenideElement btnSend = $(By.xpath("//button[text()='Отправить']"));
     private SelenideElement btnCancel = $(By.xpath("//button[text()='Отмена']"));
 
@@ -26,7 +28,7 @@ public class AddProductsAdsModal extends Base {
     private List<SelenideElement> list;
 
     public AddProductsAdsModal() {
-        list = Arrays.asList(dialogHeader, categoryDropDown, btnCancel, btnSend);
+        list = Arrays.asList(modal, categoryDropDown, btnCancel, btnSend);
     }
 
     public void addProductsAdsModalIsDisplayed() {
@@ -36,24 +38,27 @@ public class AddProductsAdsModal extends Base {
     public void seCategory(String category) {
         click(categoryDropDown);
         editText(input, category);
-        click($(".display"));
+        $(By.xpath("//div[@class=\"ui-list-item\"]//*[text()='" + category + "']"))
+                .waitUntil(Condition.appear, 2000);
+        click($(By.xpath("//div[@class=\"ui-list-item\"]//*[text()='" + category + "']")));
         AdInfo.categoryProduct = category;
     }
 
-    public void setProduct(String product){
+    public void setProduct(String product) {
         click(productDropDown);
         editText(input, product);
-        click($(".display"));
+        // input.sendKeys(Keys.BACK_SPACE);
+        click($(By.xpath("//div[@class=\"display\"][text()='" + product + "']")));
         AdInfo.nameProduct = product;
     }
 
-    public void setTemplate(String template){
+    public void setTemplate(String template) {
         click(templateDropDown);
-       // editText(input, template);
+        // editText(input, template);
         click($(".display"));
     }
 
-    public void clickBtnSend(){
+    public void clickBtnSend() {
         click(btnSend);
     }
 }
