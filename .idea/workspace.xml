@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9b6dadb-0e11-4e36-baba-6d742b6c2ac0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ClearingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ClearingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/EShop/EShopContractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/common/AddProductsAdsModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/common/AddProductsAdsModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ClearingPageDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/ClearingPageDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShop.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EShopContractTest2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EShopContractTest2.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EshopContractCases.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EshopContractCases.feature" afterDir="false" />
-    </list>
+    <list default="true" id="e9b6dadb-0e11-4e36-baba-6d742b6c2ac0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
